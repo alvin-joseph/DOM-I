@@ -40,3 +40,72 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//add text to nav bar
+const navBar = document.querySelectorAll("nav > a"); //this selects all the a tags
+navBar[0].textContent = siteContent.nav["nav-item-1"];
+navBar[1].textContent = siteContent.nav["nav-item-2"];
+navBar[2].textContent = siteContent.nav["nav-item-3"];
+navBar[3].textContent = siteContent.nav["nav-item-4"];
+navBar[4].textContent = siteContent.nav["nav-item-5"];
+navBar[5].textContent = siteContent.nav["nav-item-6"];
+
+//change color of all nav text to green
+navBar.forEach(item => item.style.color = 'green');
+
+//add new nav links
+
+
+//add text to header with breaks
+const header = document.querySelector(".cta h1");
+header.textContent = siteContent["cta"]["h1"];
+const str = siteContent["cta"]["h1"].replaceAll(" ", "<br>");
+header.innerHTML = str;
+
+//add text to button
+const button = document.querySelector(".cta button");
+button.textContent = siteContent["cta"]["button"];
+
+//add image to header
+const headerImg = document.querySelector("#cta-img");
+headerImg.src = siteContent["cta"]["img-src"];
+
+
+//select the h4's and p's in the top-content
+const mainContent = document.querySelector(".main-content");
+const topSubtitles = mainContent.querySelectorAll("h4");
+const topParagraphs = mainContent.querySelectorAll("p");
+
+//add text to h4s
+topSubtitles[0].textContent = siteContent["main-content"]["features-h4"];
+topSubtitles[1].textContent = siteContent["main-content"]["about-h4"];
+topSubtitles[2].textContent = siteContent["main-content"]["services-h4"];
+topSubtitles[3].textContent = siteContent["main-content"]["product-h4"];
+topSubtitles[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//add text to ps
+topParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+topParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+topParagraphs[2].textContent = siteContent["main-content"]["services-content"];
+topParagraphs[3].textContent = siteContent["main-content"]["product-content"];
+topParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+//add img to the main content
+const mainImg = document.querySelector("#middle-img");
+mainImg.src = siteContent["main-content"]["middle-img-src"];
+
+//select the h4 and all p's in the contact section
+const contactHeader = document.querySelector(".contact h4");
+const contactParagraphs = document.querySelectorAll(".contact p");
+
+//assign text to h4 and ps
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+contactParagraphs[0].textContent = siteContent["contact"]["address"];
+//const contactStr = siteContent["contact"]["address"].replaceAll(" ", "<br>");
+//contactParagraphs[0].innerHTML = contactStr;
+contactParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactParagraphs[2].textContent = siteContent["contact"]["email"];
+
+//select footer and assign text to footer
+
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
