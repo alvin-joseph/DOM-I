@@ -50,11 +50,21 @@ navBar[3].textContent = siteContent.nav["nav-item-4"];
 navBar[4].textContent = siteContent.nav["nav-item-5"];
 navBar[5].textContent = siteContent.nav["nav-item-6"];
 
+//add new nav links
+const blogLink = document.createElement('a'); //creates the a tag somewhere
+blogLink.textContent = 'Blog' //changes the text of link
+blogLink.href = '#'; //assigns the href
+document.querySelector('nav').prepend(blogLink) //takes whatever we are going to pass in and apply it to the back fo the selected area
+blogLink.style.color = 'green';
+
+const mysteryLink = document.createElement('a'); //creates the a tag somewhere
+mysteryLink.textContent = 'Mystery' //changes the text of link
+mysteryLink.href = '#'; //assigns the href
+document.querySelector('nav').appendChild(mysteryLink) //takes whatever we are going to pass in and apply it to the back fo the selected area
+mysteryLink.style.color = 'green';
+
 //change color of all nav text to green
 navBar.forEach(item => item.style.color = 'green');
-
-//add new nav links
-
 
 //add text to header with breaks
 const header = document.querySelector(".cta h1");
